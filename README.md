@@ -18,4 +18,4 @@ Once you have pulled the image, to create a container run the follow command:
 
 `docker run -p 8081:80 --name lempstack72Container catcoder/lempstack72`
 
-This will run a server on your [Localhost](https://localhost:8081 "Docker installation").
+This will run a server on your [Localhost](http://localhost:8081 "Docker installation").
