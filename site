@@ -1,7 +1,7 @@
 server {
         listen 80;
 
-        root /var/www/sites/;
+        root /var/www/sites/web;
         index index.php ini.php ini2.php;
 
         server_name _;

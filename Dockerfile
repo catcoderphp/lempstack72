@@ -42,11 +42,11 @@ RUN echo "mysql-server mysql-server/root_password password $MYSQL_PWD" | debconf
 RUN echo "mysql-server mysql-server/root_password_again password $MYSQL_PWD" | debconf-set-selections
 RUN apt-get -y install mysql-server 
 RUN useradd -s /bin/bash sites
-RUN mkdir -p /var/www/sites
+RUN mkdir -p /var/www/sites/web
 ADD conf/supervisord.conf /etc/supervisord.conf
 ADD start.sh /start.sh
 RUN chmod 777 /start.sh
-ADD index.php /var/www/sites/
+ADD index.php /var/www/sites/web
 ADD site /etc/nginx/sites-available/
 RUN rm -r /etc/nginx/sites-enabled/default
 RUN ln -s /etc/nginx/sites-available/site /etc/nginx/sites-enabled/
