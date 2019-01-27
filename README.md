@@ -31,14 +31,14 @@ This section provides an overview of Docker’s default networking behavior, inc
 
 Create a container associated to the new network
 
-` docker run -tid --net br0 --ip 172.19.0.1 -p 8082:80 -v $(pwd):/var/www/sites --name expressive catcoder/lempstack72 `
+` docker run -tid --net myDockerNetwork --ip 172.19.0.1 -p 8082:80 -v $(pwd):/var/www/sites --name expressive catcoder/lempstack72 `
 
 # Redis
 Pull the [Redis image](https://hub.docker.com/_/redis "Docker installation") and see the details to create a container.
 
 Create a new redis container associated to the new network
 
-` docker run --net br0 --ip 172.19.0.2 --name some-redis -d redis `
+` docker run --net myDockerNetwork --ip 172.19.0.2 --name some-redis -d redis `
 
 Now you can listen redis from your first container (expressive)
 
