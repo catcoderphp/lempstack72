@@ -57,4 +57,4 @@ RUN php composer-setup.php --install-dir=/usr/local/bin --filename=composer
 ADD php-fpm  /var/log/ 
 CMD ["/bin/bash","start.sh"]
 MAINTAINER "Christian Fuentes" <Christian.fuentes.234@gmail.com>
-MAINTAINER "Jose Luis Gomez Jaen" <catcoder.php@gmail.com>
+MAINTAINER "CLGJ DEV" <catcoder.php@gmail.com>
