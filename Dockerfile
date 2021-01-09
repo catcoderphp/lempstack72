@@ -54,7 +54,9 @@ RUN ln -s /etc/nginx/sites-available/site /etc/nginx/sites-enabled/
 RUN service php7.2-fpm start
 RUN curl -sS https://getcomposer.org/installer -o composer-setup.php
 RUN php composer-setup.php --install-dir=/usr/local/bin --filename=composer
+RUN pecl install mongodb
+RUN echo "extension=mongodb.so" >> /etc/php/7.2/cli/php.ini
+RUN echo "extension=mongodb.so" >> /etc/php/7.2/fpm/php.ini
 ADD php-fpm  /var/log/ 
 CMD ["/bin/bash","start.sh"]
-MAINTAINER "Christian Fuentes" <Christian.fuentes.234@gmail.com>
 MAINTAINER "CLGJ DEV" <catcoder.php@gmail.com>
